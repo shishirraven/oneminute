@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Notifications Example</title>
+<script>
+    // Request permission on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        if (Notification.permission == "granted") {
+            alert("neeraj")
+            Notification.requestPermission();
+        }
+    });
+
+    // Function to display notification
+    function showNotification() {
+        if (Notification.permission === "granted") {
+            var notification = new Notification("Hello, world!");
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>Web Notifications Example</h1>
+    <button onclick="showNotification()">Show Notification</button>
+</body>
+</html>

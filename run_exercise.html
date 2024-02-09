@@ -7,7 +7,7 @@
 <script>
     // Request permission on page load
     document.addEventListener('DOMContentLoaded', function () {
-        if (Notification.permission == "granted") {
+        if (Notification.permission != "granted") {
             alert("neeraj ")
             Notification.requestPermission();
         }
